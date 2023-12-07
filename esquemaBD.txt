@@ -1,0 +1,74 @@
+Usuário:
+    id (PK) (Serial)
+    nome (varchar)
+    email (varchar)
+    senha (varchar)
+    foto (bytea)
+    cpf (char(11))
+
+Prestador:
+    usuario_id (PK, FK Usuário)(1-1) (int)
+    portfolio (varchar)
+    ramo (varchar)
+    num_servicos (int)
+    num_solicitacoes (int)
+
+Cliente:
+    usuario_id (PK, FK Usuário)(1-1) (int)
+    num_servicos (int)
+    num_solicitacoes (int)
+
+Review:
+    id (PK) (serial)
+    avaliador (FK Usuário)(1-1) (int)
+    avaliado (FK Usuário)(1-1) (int)
+    conteudo (text)
+    pontuacao (int)
+    data_hora (timestamp)
+
+Chat:
+    id (PK) (serial)
+    cliente_id (FK Usuário)(1-1) (int)
+    prestador_id (FK Usuário)(1-1) (int)
+    mensagens (varchar)
+    data_hora (timestamp)
+
+Pagamento:
+    id (PK) (serial)
+    cliente_id (FK Usuário)(1-1) (int)
+    prestador_id (FK Usuário)(1-1) (int)
+    servico_id (FK Serviço)(1-1) (int)
+    valor (numeric)
+    data_hora (timestamp)
+    metodo (varchar)
+
+Carteira:
+    id (PK) (serial)
+    prestador_id (FK Usuário)(1-1) (int)
+    saldo (numeric)
+    saldo_disponivel (numeric)
+
+Extrato:
+    id (PK) (serial)
+    carteira_id (FK Carteira)(n-1) (int)
+    data_hora (timestamp)
+    descricao (varchar)
+    valor (numeric)
+
+Solicitação:
+    id (PK) (serial)
+    cliente_id (FK Usuário)(1-1) (int)
+    prestador_id (FK Usuário)(1-1) (int)
+    servico_id (FK Serviço)(1-1) (int)
+    valor (numeric)
+    data_hora_solicitacao (timestamp)
+    data_hora_servico (timestamp)
+    status (varchar)
+
+Serviço:
+    id (PK) (serial)
+    solicitacao_id (FK Solicitação)(1-1) (int)
+    pagamento_id (FK Pagamento)(1-1) (int)
+    valor (numeric)
+    data_hora (timestamp)
+    status (varchar)
