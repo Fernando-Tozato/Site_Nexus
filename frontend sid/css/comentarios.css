@@ -1,0 +1,50 @@
+/* Estilos para o formulário de comentários */
+.comentarios {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comentarios h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.comentarios form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarios input[type="text"],
+.comentarios input[type="email"],
+.comentarios textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.comentarios textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.comentarios input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff; /* Azul */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comentarios input[type="submit"]:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}

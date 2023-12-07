@@ -1,0 +1,23 @@
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    /* Ajustes para tamanhos menores de tela */
+    .container {
+        padding: 0 10px; /* Exemplo de ajuste no padding */
+        max-width: 100%; /* Tornar a largura máxima do container 100% */
+    }
+
+    /* Outros ajustes necessários para dispositivos móveis */
+    /* ... */
+}
+
+/* Estilos para tablets e telas maiores */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Ajustes específicos para tablets */
+    /* ... */
+}
+
+/* Estilos para desktops */
+@media screen and (min-width: 1025px) {
+    /* Ajustes específicos para telas maiores, como desktops */
+    /* ... */
+}
