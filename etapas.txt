@@ -1,0 +1,43 @@
+1- Definir requisitos: (apenas guia de requisitos)
+    perfis de usuários (clientes e prestadores)
+    portfólios
+    avaliação de usuários
+    chat
+    sistema de pagamentos (stripe)
+    sistema de métricas (admin)
+    sistema de planos por assinatura (apenas um plano para cada tipo de usuário)
+    carteira digital
+    integração com shopify
+
+2- Escolher plataforma:
+    Front: HTML, CSS, JS
+    Back: Django, PostgreSQL, Django REST Framework
+
+3- Configurar servidor web:
+    Servidor ainda não escolhido, precisa ser compatível com django e windows.
+    Essa tarefa será concluída após o desenvolvimento do backend e das APIs.
+
+4- Banco de dados: (PostgreSQL)
+    Já concluída.
+    Prestador, Cliente, Review, Chat, Carteira, Extrato, Pagamento, Solicitação, Serviço.
+
+5- Desenvolver lógica do Back-end: (Django)
+    etapa atual do desenvolvimento.
+
+6- Desenvolver APIs: (Django REST Framework)
+
+7- Integração Front-end:
+
+8- Integrar sistema de pagamentos: (stripe)
+
+9- Sistema de mensagens:
+
+10- Testes:
+
+11- Segurança:
+
+12- Hospedagem e domínio:
+
+13- Lançamento:
+
+14- Suporte contínuo:

@@ -11,6 +11,8 @@
         "solicitacao",
         "solicitacoes",
         "usuario",
-        "varchar"
+        "usuarios",
+        "varchar",
+        "viewsets"
     ]
 }
