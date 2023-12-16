@@ -1,6 +1,6 @@
 from django.conf import settings
-from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.db import models
 
 class Usuario(AbstractUser):
     foto = models.ImageField(upload_to='fotos/',null=True,blank=True)
@@ -22,9 +22,6 @@ class Usuario(AbstractUser):
         blank=True,
         related_name="usuarios_user_permissions"  # Adicione o related_name aqui
     )
-    
-    class Meta:
-        swappable = "AUTH_USER_MODEL"
 
 class Prestador(models.Model):
     usuario_id = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='usuario_prestador')

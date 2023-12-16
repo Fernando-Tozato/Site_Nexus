@@ -6,6 +6,13 @@ class UsuarioSerializer(serializers.ModelSerializer):
         model = Usuario
         fields = ['id', 'username', 'email', 'foto', 'cpf', 'password', 'bairro', 'cidade', 'estado', 'celular']
         extra_kwargs = {'password': {'write_only': True}}
+    
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        if not data['foto']:
+            # Se o campo foto for nulo, use a URL da imagem padrão
+            data['foto'] = '/static/img/padrao.jpg'  # Substitua com o caminho real
+        return data
 
 class PrestadorSerializer(serializers.ModelSerializer):
     class Meta:

@@ -1,8 +1,9 @@
 # No arquivo admin.py
 
 from django.contrib import admin
-from .models import Prestador, Cliente, Review, Chat, Pagamento, Carteira, Extrato, Servico, Solicitacao  # Importe os modelos necessários
+from .models import Usuario, Prestador, Cliente, Review, Chat, Pagamento, Carteira, Extrato, Servico, Solicitacao  # Importe os modelos necessários
 
+admin.site.register(Usuario)
 admin.site.register(Prestador)
 admin.site.register(Cliente)
 admin.site.register(Review)

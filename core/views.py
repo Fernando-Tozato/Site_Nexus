@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth import get_user_model
-from .models import Usuario, Prestador, Cliente, Review, Chat, Carteira, Extrato, Pagamento, Solicitacao, Servico
+from .models import Prestador, Cliente, Review, Chat, Carteira, Extrato, Pagamento, Solicitacao, Servico
 from .serializers import (
     UsuarioSerializer, PrestadorSerializer, ClienteSerializer, ReviewSerializer, ChatSerializer,
     CarteiraSerializer, ExtratoSerializer, PagamentoSerializer, SolicitacaoSerializer, ServicoSerializer
