@@ -14,5 +14,8 @@
         "usuarios",
         "varchar",
         "viewsets"
+    ],
+    "python.analysis.extraPaths": [
+        "./apps"
     ]
 }

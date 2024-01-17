@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+
+#main_table {
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 1rem;
+    border-color: red;
+    border-collapse: collapse;
+    padding: 0.25rem;
+    background-color: white;
+}
+
+.table_options {
+    width: 9rem;
+    height: 12rem;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 1rem;
+    border-color: red;
+    position: relative;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    background-color: white;
+    transition: transform 0.6s;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+}
+
+.table_options:hover {
+    transform: perspective(1000px) scale(1.1) translateZ(0);
+    box-shadow: 0 0 2rem rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.profile {
+    margin: 0.5rem;
+    transition: transform 0.6s;
+}
+
+.profile:hover {
+    transform: scale(1.3);
+}
+
+.user {
+    font-size: 6rem;
+}
+
+.option_text {
+    margin: 0.5rem;
+}
+
+.name {
+    font-size: large;
+    font-weight: bold;
+    transition: transform 0.6s;
+}
+
+.name:hover {
+    transform: scale(1.3);
+}
+
+.distance {
+    font-size: medium;
+    font-weight: normal;
+    transition: transform 0.6s;
+}
+
+.distance:hover {
+    transform: scale(1.3);
+}
+
+.options_bar {
+    position: absolute;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 1rem;
+    border-color: red;
+    background-color: white;
+    margin: 0 0.5rem 0.5rem;
+}
+
+.bar {
+    font-size: 1.5rem;
+    margin: 0.3rem 0.45rem;
+    transition: transform 0.6s;
+}
+
+.bar:hover {
+    transform: scale(1.3);
+}
+
+.fa-heart.clicked {
+    color: red;
+}
+
+.fa-face-smile.clicked {
+    color: yellow;
+    background-color: black;
+    border-radius: 1.5rem;
+    background-size: 1.4rem;
+}
+
+.fa-thumbs-down.clicked {
+    color: blue;
+}
