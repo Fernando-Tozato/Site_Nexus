@@ -1,38 +1,42 @@
-<html>
-
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="./css/dispositivo.css" />
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem somos?</title>
 
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dispositivo.css' %}">
+</head>
 <body>
     <header class="menu-principal">
         <main>
             <div class="header-1">
                 <div class="logo">
-                    <img src="./img/logo.png" />
+                    <img src="{% static 'img/logo.png' %}" />
                 </div>
                 <div class="redes-sociais">
                     <ul>
                         <li>
                             <a href="">
-                                <img src="./img/rss.png" />
+                                <img src="{% static 'img/rss.png' %}" />
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/face.png" />
+                                <img src="{% static 'img/face.png' %}" />
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/tw.png" />
+                                <img src="{% static 'img/tw.png' %}" />
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/linkedin.png" />
+                                <img src="{% static 'img/linkedin.png' %}" />
                             </a>
                         </li>
                     </ul>
@@ -46,7 +50,7 @@
                 <ul>
                     <li><a href="file:///C:/Users/abesi/OneDrive/%C3%81rea%20de%20Trabalho/Mirror%20Fashion/index.html">Inicio</a></li>
                     <li>
-                        <a href="">Serviços</a>
+                        <a href="http://127.0.0.1:8000/table/">Serviços</a>
                     </li>
                     <li>
                         <a href="">Paginas</a>
@@ -55,7 +59,7 @@
                         <a href="">Blog</a>
                     </li>
                     <li>
-                        <a href="contato.html">Contato</a>
+                        <a href="http://127.0.0.1:8000/contato/">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -154,10 +158,10 @@
             </p>
         </div>
     </div>
-    <script type="text/javascript" src="./js/jquery.js"></script>
-    <script type="text/javascript" src="./js/jquery-migrate.js"></script>
-    <script type="text/javascript" src="./js/slick.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-</body>
 
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-migrate.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
 </html>

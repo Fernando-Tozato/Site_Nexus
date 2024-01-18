@@ -59,5 +59,15 @@ class ServicoViewSet(viewsets.ModelViewSet):
     queryset = Servico.objects.all()
     serializer_class = ServicoSerializer
 
+# Views para páginas
 def index(request):
     return render(request, 'core/index.html')
+
+def contato(request):
+    return render(request, 'core/contato.html')
+
+def quem_somos(request):
+    return render(request, 'core/Quem somos.html')
+
+def table(request):
+    return render(request, 'core/table.html')

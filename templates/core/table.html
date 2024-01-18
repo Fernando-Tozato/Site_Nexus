@@ -1,16 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROTOTIPO</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <script src="https://kit.fontawesome.com/aa21806e5b.js" crossorigin="anonymous"></script>
-    <script src="./js/table.js"></script>
-    <link rel="stylesheet" href="./css/styletable.css">
+    <title>table</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styletable.css' %}">
 </head>
 <body>
-    <button onclick="goBack()">Voltar</button> <!-- Botão de voltar -->
     <div id="main_table">
         <table>
             <tr>
@@ -283,10 +282,7 @@
         </table>
     </div>
 
-    <script>
-        function goBack() {
-            window.history.back(); // Função para voltar à página anterior
-        }
-    </script>
+    <script src="https://kit.fontawesome.com/aa21806e5b.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/table.js' %}"></script>
 </body>
 </html>

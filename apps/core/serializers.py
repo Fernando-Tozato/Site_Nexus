@@ -11,7 +11,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
         data = super().to_representation(instance)
         if not data['foto']:
             # Se o campo foto for nulo, use a URL da imagem padrão
-            data['foto'] = '/static/img/padrao.jpg'  # Substitua com o caminho real
+            data['foto'] = '.../static/img/padrao.png'  # Substitua com o caminho real
         return data
 
 class PrestadorSerializer(serializers.ModelSerializer):

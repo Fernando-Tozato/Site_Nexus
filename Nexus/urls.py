@@ -22,7 +22,7 @@ from rest_framework.routers import DefaultRouter
 from apps.core.views import (
     UsuarioViewSet, PrestadorViewSet, ClienteViewSet, ReviewViewSet, ChatViewSet,
     CarteiraViewSet, ExtratoViewSet, PagamentoViewSet, SolicitacaoViewSet, ServicoViewSet,
-    index
+    index, contato, quem_somos, table,
 )
 
 router = DefaultRouter()
@@ -42,6 +42,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('', index, name='index'),
+    path('contato/', contato, name='contato'),
+    path('quem_somos/', quem_somos, name='quem_somos'),
+    path('table/', table, name='table'),
 ]
 
 if settings.DEBUG:
