@@ -5,6 +5,7 @@ from django.db import models
 class Usuario(AbstractUser):
     foto = models.ImageField(upload_to='fotos/',null=True,blank=True)
     cpf = models.CharField(max_length=11,unique=True)
+    cep = models.CharField(max_length=8)
     bairro = models.CharField(max_length=255)
     cidade = models.CharField(max_length=255)
     estado = models.CharField(max_length=2)

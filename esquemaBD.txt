@@ -5,11 +5,18 @@ Usuário:
     senha (varchar)
     foto (bytea)
     cpf (char(11))
+    cep (char(8))
+    bairro (varchar)
+    cidade (varchar)
+    estado (varchar)
+    celular (char(11))
 
 Prestador:
     usuario_id (PK, FK Usuário)(1-1) (int)
     portfolio (varchar)
     ramo (varchar)
+    especialidade (varchar)
+    distancia (int)
     num_servicos (int)
     num_solicitacoes (int)
 

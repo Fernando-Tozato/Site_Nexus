@@ -8,6 +8,25 @@ from .serializers import (
     CarteiraSerializer, ExtratoSerializer, PagamentoSerializer, SolicitacaoSerializer, ServicoSerializer
 )
 
+# Views para páginas
+def index(request):
+    return render(request, 'core/index.html')
+
+def contato(request):
+    return render(request, 'core/contato.html')
+
+def quem_somos(request):
+    return render(request, 'core/Quem somos.html')
+
+def table(request):
+    return render(request, 'core/table.html')
+
+def criar_perfil(request):
+    return render(request, 'core/criar_perfil.html')
+
+def login(request):
+    return render(request, 'core/login.html')
+
 # Views para Usuario
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = get_user_model().objects.all()
@@ -58,16 +77,3 @@ class SolicitacaoViewSet(viewsets.ModelViewSet):
 class ServicoViewSet(viewsets.ModelViewSet):
     queryset = Servico.objects.all()
     serializer_class = ServicoSerializer
-
-# Views para páginas
-def index(request):
-    return render(request, 'core/index.html')
-
-def contato(request):
-    return render(request, 'core/contato.html')
-
-def quem_somos(request):
-    return render(request, 'core/Quem somos.html')
-
-def table(request):
-    return render(request, 'core/table.html')

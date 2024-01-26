@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie seu perfil</title>
+
+    <link rel="stylesheet" href="{% static  'css/criar_perfil.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form id="profileForm" novalidate>
+            <h1>Crie seu perfil</h1>
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required minlength="3" title="Name must be at least 3 characters long.">
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required minlength="11" title="Please enter a valid phone number.">
+                <span class="error" id="phoneError"></span>
+            </div>
+            <div class="form-group">
+                <label for="CEP">CEP:</label>
+                <input type="postal-code" id="CEP" name="CEP" required minlength="8" title="CEP must be at least 8 characters long.">
+                <span class="error" id="CEPError"></span>
+            </div>
+            <div class="form-group">
+                <label for="Bairro">Bairro:</label>
+                <input type="text" id="Bairro" name="Bairro" required minlength="30" title="Your neighborhood must be at least 30 characters long.">
+                <span class="error" id="BairroError"></span>
+            </div>
+            <div class="form-group">
+                <label for="Estado">Estado:</label>
+                <input type="text" id="Estado" name="Estado" required minlength="20" title="Estado must be at least 20 characters long.">
+                <span class="error" id="EstadoError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required maxlength="32" title="Password must be at most 32 characters long.">
+                <span class="error" id="passwordError"></span>
+            </div>
+            <input type="submit" name="submit" value="Criar Perfil">
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById("profileForm");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phone");
+        const BairroInput = document.getElementById("Bairro");
+        const EstadoInput = document.getElementById("Estado");
+        const CEPInput = document.getElementById("CEP");
+        const passwordInput = document.getElementById("password");
+
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const phoneError = document.getElementById("phoneError");
+        const CEPError = document.getElementById("CEPError");
+        const BairroError = document.getElementById("BairroError");
+        const EstadoError = document.getElementById("EstadoError");
+        const passwordError = document.getElementById("passwordError");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let isValid = true;
+
+            if (nameInput.value.length < 3) {
+                nameError.textContent = "Nome deve ter no mínimo 3 caracteres.";
+                isValid = false;
+            } else {
+                nameError.textContent = "";
+            }
+
+            if (!emailInput.checkValidity()) {
+                emailError.textContent = "Por favor, insira um endereço de email válido.";
+                isValid = false;
+            } else {
+                emailError.textContent = "";
+            }
+
+            if (phoneInput.value.length < 12) {
+                phoneError.textContent = "Por favor, insira um número de telefone válido.";
+                isValid = false;
+            } else {
+                phoneError.textContent = "";
+            }
+
+            if (CEPInput.value.length < 8) {
+                CEPError.textContent = "CEP deve ter no mínimo 8 caracteres.";
+                isValid = false;
+            } else {
+                CEPError.textContent = "";
+            }
+
+            if (BairroInput.value.length < 2) {
+                BairroError.textContent = "Seu bairro deve ter no mínimo 80 caracteres.";
+                isValid = false;
+            } else {
+                BairroError.textContent = "";
+            }
+
+            if (EstadoInput.value.length < 2) {
+                EstadoError.textContent = "Estado deve ter no mínimo 20 caracteres.";
+                isValid = false;
+            } else {
+                EstadoError.textContent = "";
+            }
+
+            if (passwordInput.value.length < 8 || passwordInput.value.length > 32) {
+                passwordError.textContent = "Senha deve ter entre 8 e 32 caracteres.";
+                isValid = false;
+            } else {
+                passwordError.textContent = "";
+            }
+
+            if (isValid) {
+                // Submit the form data to the server here
+                console.log("Form submitted:", {
+                    name: nameInput.value,
+                    email: emailInput.value,
+                    phone: phoneInput.value,
+                    CEP: CEPInput.value,
+                    Bairro: BairroInput.value,
+                    Estado: EstadoInput.value,
+                    password: passwordInput.value
+                });
+
+                // Clear the form fields
+                nameInput.value = "";
+                emailInput.value = "";
+                phoneInput.value = "";
+                CEPInput.value = "";
+                BairroInput.value = "";
+                EstadoInput.value = "";
+                passwordInput.value = "";
+            }
+        });
+    </script>
+</body>
+</html>
