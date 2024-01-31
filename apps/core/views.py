@@ -27,6 +27,9 @@ def criar_perfil(request):
 def login(request):
     return render(request, 'core/login.html')
 
+def teste(request):
+    return render(request, 'core/teste.html')
+
 # Views para Usuario
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = get_user_model().objects.all()

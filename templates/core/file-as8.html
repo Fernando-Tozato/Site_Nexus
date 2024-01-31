@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dispositivo.css' %}">
+</head>
+<body>
+    <header class="menu-principal">
+        <div class="header-1">
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="Logotipo do Nexus">
+            </div>
+            <nav class="redes-sociais">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fab fa-rss"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="col-100 menu-urls">
+        <div class="header-2">
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="http://127.0.0.1:8000/quem_somos/">Quem somos?</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/table/">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="">Paginas</a>
+                    </li>
+                    <li>
+                        <a href="">Blog</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/contato/">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <form class="busca">
+                <input placeholder="Search Something" type="text">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </main>
+    <!-- Mais conteúdo aqui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/jquery-migrate.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
